@@ -664,7 +664,53 @@ namespace AzureStorageFilterBuilder_UnitTests
             Assert.AreEqual(expected,actual);
         }
 
+        [TestMethod]
+        public void GreatherThen_Int_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Age gt 27";
 
+            //Act
+            string actual = EmptyFilter()
+                .Column("Age").GreaterThan(27);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GreatherThen_Long_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Id gt 1234567890123";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Id").GreaterThan(1234567890123);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GreatherThan_DateTime_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Time gt datetime'2008-07-10T00:00:00Z'";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Time").GreaterThan(new DateTime(2008, 7, 10, 0, 0, 0, DateTimeKind.Utc));
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        #endregion
+
+        #region GreaterThenOrEqual
+
+       //todo
 
         #endregion
 
@@ -681,7 +727,7 @@ namespace AzureStorageFilterBuilder_UnitTests
         //    TestData [3] = new string[] { "string", "double", "int", "long", "Guid", "bool", "DateTime"}; //Нигде не используется, для удобства
         //    TestData [4] = new string[] { "Name", "Weight", "Age", "Id", "Guid", "IsAlive", "Time"};
         //    TestData [5] = new string[] { "Andrew", "4.72", "24", "100200300400567", "a455c695-df98-5678-aaaa-81d3367e5a34", "true", "datetime'2008-07-10T00:00:00Z'"};
-            
+
 
         //    for (int i = 0; i<TestData [1].Length; i++)
         //    {
@@ -768,15 +814,15 @@ namespace AzureStorageFilterBuilder_UnitTests
         //                        ;
         //                    break;
         //            }        
-                                
-                    
+
+
         //            //Assert
         //            Assert.AreEqual(expected,actual);
 
 
         //        }
         //    }
-          
+
         //}
 
         #endregion
