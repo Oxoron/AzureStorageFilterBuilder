@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>AzureStorageFilterBuilder</id>
+    <version>1.0.0.0</version>
+    <title>AzureStorageFilterBuilder</title>
+    <authors>Alexander Laptev, Andrew Isayev</authors>
+    <owners>Alexander Laptev</owners>
+    <licenseUrl>https://github.com/Oxoron/AzureStorageFilterBuilder/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Oxoron/AzureStorageFilterBuilder</projectUrl>    
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>AzureStorageFilterBuilder allows developer to create filters for Azure Storage Table request in a human-friendly way.</description>
+    <releaseNotes></releaseNotes>
+    <tags>azure storage table filter</tags>
+  </metadata>
+  <files>
+	<file src="bin\Release\AzureStorageFilterBuilder.dll" target="lib\net40\" />
+  </files>
+</package>
