@@ -708,12 +708,302 @@ namespace AzureStorageFilterBuilder_UnitTests
 
         #endregion
 
-        #region GreaterThenOrEqual
+        #region GreaterThenOrEqual Tests
 
-       //todo
+        [TestMethod]
+        public void GreaterThenOrEqual_String_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Name ge 'Andrew'";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Name").GreaterThanOrEqual("Andrew");
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GreaterThenOrEqual_Double_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Weight ge 5";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Weight").GreaterThanOrEqual(5);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GreaterThenOrEqual_Int_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Age ge 27";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Age").GreaterThanOrEqual(27);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GreaterThenOrEqual_Long_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Id ge 1234567890123";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Id").GreaterThanOrEqual(1234567890123);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GreaterThenOrEqual_DateTime_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Time ge datetime'2008-07-10T00:00:00Z'";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Time").GreaterThanOrEqual(new DateTime(2008, 7, 10, 0, 0, 0, DateTimeKind.Utc));
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        #endregion
+        
+        #region LessThan Tests
+
+        [TestMethod]
+        public void LessThan_String_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Name lt 'Andrew'";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Name").LessThan("Andrew");
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void LessThan_Double_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Weight lt 5";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Weight").LessThan(5);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void LessThan_Int_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Age lt 27";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Age").LessThan(27);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void LessThan_Long_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Id lt 1234567890123";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Id").LessThan(1234567890123);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void LessThan_DateTime_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Time lt datetime'2008-07-10T00:00:00Z'";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Time").LessThan(new DateTime(2008, 7, 10, 0, 0, 0, DateTimeKind.Utc));
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
 
         #endregion
 
+        #region LessThanOrEqual Tests
+
+        [TestMethod]
+        public void LessThanOrEqual_String_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Name le 'Andrew'";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Name").LessThanOrEqual("Andrew");
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void LessThanOrEqual_Double_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Weight le 5";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Weight").LessThanOrEqual(5);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void LessThanOrEqual_Int_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Age le 27";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Age").LessThanOrEqual(27);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void LessThanOrEqual_Long_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Id le 1234567890123";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Id").LessThanOrEqual(1234567890123);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void LessThanOrEqual_DateTime_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Time le datetime'2008-07-10T00:00:00Z'";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Time").LessThanOrEqual(new DateTime(2008, 7, 10, 0, 0, 0, DateTimeKind.Utc));
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        #endregion
+        
+        #region NotEqual Tests
+
+        [TestMethod]
+        public void NotEqual_String_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Name ne 'Andrew'";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Name").NotEqual("Andrew");
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void NotEqual_Double_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Weight ne 5";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Weight").NotEqual(5);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void NotEqual_Int_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Age ne 27";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Age").NotEqual(27);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void NotEqual_Long_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Id ne 1234567890123";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Id").NotEqual(1234567890123);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void NotEqual_DateTime_CorrectValue()
+        {
+            //Arrange
+            const string expected = "Time ne datetime'2008-07-10T00:00:00Z'";
+
+            //Act
+            string actual = EmptyFilter()
+                .Column("Time").NotEqual(new DateTime(2008, 7, 10, 0, 0, 0, DateTimeKind.Utc));
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        #endregion
+        
         #region Summary_tests
 
         //[TestMethod, Ignore]
