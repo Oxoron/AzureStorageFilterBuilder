@@ -1,5 +1,20 @@
 # AzureStorageFilterBuilder
-The library for creation filters for Azure Storage Tables requests. Contains standard opportunities (And\Or\Not, Equal\LessThan\etc) and some other features (In, Between, StartsWith). 
+The library for creation filters for Azure Storage Tables requests. Contains standard opportunities (And\Or\Not, Equal\LessThan\etc) and some other features (In, Between, StartsWith). If you are not fan of code like
+```cs
+string date1 = TableQuery.GenerateFilterConditionForDate(
+                   "Date", QueryComparisons.GreaterThanOrEqual,
+                   DateTimeOffsetVal);
+string date2 = TableQuery.GenerateFilterConditionForDate(
+                   "Date", QueryComparisons.LessThanOrEqual,
+                   DateTimeOffsetVal);
+string finalFilter = TableQuery.CombineFilters(
+                        TableQuery.CombineFilters(
+                            partitionFilter,
+                            TableOperators.And,
+                            date1),
+                        TableOperators.And, date2);
+```
+this lib is created for you.
 
 ## Content
 
@@ -11,7 +26,11 @@ The library for creation filters for Azure Storage Tables requests. Contains sta
 
 ## Getting started
 **Step 1.**
-Download and build library, add dll to your solution.
+Install AzureStorageFilterBuilder via the NuGet package: [AzureStorageFilterBuilder](https://www.nuget.org/packages/AzureStorageFilterBuilder)
+
+```
+PM> Install-Package AzureStorageFilterBuilder
+```
 
 **Step 2.**
 Add using statement
@@ -26,7 +45,7 @@ string filter = AzureStrorageFilter.Empty
                   .And()
                   .RowKey().Equal("AnyRowKey");
 ```
-for the filter "PartitionKey eq 'AnyPartitionKey' and RowKey eq 'AnyRowKey'" filter.
+for the "PartitionKey eq 'AnyPartitionKey' and RowKey eq 'AnyRowKey'" filter.
 
 ## Basic methods
 Empty, PartitionKey(), RowKey(), Column(columnName), Const(@const) and Bracket methods. Empty return new filter converted to empty string. PartitionKey and RowKey add "PartitionKey" and "RowKey" statements to filter. Column("Age") add "Age" statement to the filter, and Const("StringValue") add formatted value to the filter. 
