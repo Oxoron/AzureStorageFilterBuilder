@@ -525,13 +525,6 @@ namespace AzureStorageFilterBuilder_UnitTests
         #endregion
 
         #region Comparison Operators With Values Tests
-
-        /*
-       to do: 
-       //Methods: Equal, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual, NotEqual
-       Arguments: string, double, int, long, Guid, bool, DateTime
-       */
-
         #region Equal tests
         [TestMethod]
         public void Equal_String_CorrectValue()
@@ -1003,120 +996,6 @@ namespace AzureStorageFilterBuilder_UnitTests
         }
 
         #endregion
-        
-        #region Summary_tests
-
-        //[TestMethod, Ignore]
-        //public void Summary_CorrectValue_test()
-        //{
-
-        //    // Operations, URI expression, argument type, colomn name, argument
-        //    string [][] TestData = new string[5][];
-        //    TestData [1] = new string[] { "Equal", "GreaterThan", "GreaterThanOrEqual", "LessThan", "LessThanOrEqual", "NotEqual"};
-        //    TestData [2] = new string[] { "eq","gt","ge","lt","le","ne"};
-        //    TestData [3] = new string[] { "string", "double", "int", "long", "Guid", "bool", "DateTime"}; //Нигде не используется, для удобства
-        //    TestData [4] = new string[] { "Name", "Weight", "Age", "Id", "Guid", "IsAlive", "Time"};
-        //    TestData [5] = new string[] { "Andrew", "4.72", "24", "100200300400567", "a455c695-df98-5678-aaaa-81d3367e5a34", "true", "datetime'2008-07-10T00:00:00Z'"};
-
-
-        //    for (int i = 0; i<TestData [1].Length; i++)
-        //    {
-        //        for (int j = 0; j < TestData [3].Length; j++)
-        //        {
-        //            //Arrange
-        //            string arg1;
-        //            switch (j)
-        //            {
-        //                case 1:
-        //                    arg1 = "\'" + TestData[5][j] + "\'";
-        //                    break;
-        //                case 5:
-        //                    arg1 = "guid'" + TestData[5][j] + "\'";
-        //                    break;
-        //                default:
-        //                    arg1 = TestData[5][j];
-        //                    break;
-
-        //            }
-
-        //            string expected = TestData[4][j] + " " + TestData[2][i] + " " + arg1; //Сделать переменную константой не получилось. Почему?
-
-        //            //Act
-        //            switch (j)
-        //            {
-        //                case 1:
-        //                    var arg2  = TestData[5][j];
-        //                    break;
-        //                case 2:
-        //                    var arg2 = double.Parse(TestData[5][j]);
-        //                    break;
-        //                case 3:
-        //                    var arg2 = int.Parse(TestData[5][j]);
-        //                    break;
-        //                case 4:
-        //                    var arg2 = long.Parse(TestData[5][j]);
-        //                    break;
-        //                case 5:
-        //                    var arg2 = Guid.Parse(TestData[5][j]);
-        //                    break;
-        //                case 6:
-        //                    var arg2 = bool.Parse(TestData[5][j]);
-        //                    break;
-        //                case 7:
-        //                    var arg2 = new DateTime(2008, 7, 10, 0, 0, 0, DateTimeKind.Utc);
-        //                    break;
-        //               // default:
-        //               //     var arg2 = TestData[5][j]; //Тоже не имеет смысла
-        //               //     break;
-        //            }
-
-        //            string actual;
-        //            switch (i)
-        //            {
-        //                case 1:
-        //                    actual = EmptyFilter()
-        //                        .Column(TestData[4][j]).Equal(arg2)
-        //                        ;
-        //                    break;
-        //                case 2:
-        //                    actual = EmptyFilter()
-        //                        .Column(TestData[4][j]).GreaterThan(arg2)
-        //                        ;
-        //                    break;
-        //                case 3:
-        //                    actual = EmptyFilter()
-        //                        .Column(TestData[4][j]).GreaterThanOrEqual(arg2)
-        //                        ;
-        //                    break;
-        //                case 4:
-        //                    actual = EmptyFilter()
-        //                        .Column(TestData[4][j]).LessThan(arg2)
-        //                        ;
-        //                    break;
-        //                case 5:
-        //                    actual = EmptyFilter()
-        //                        .Column(TestData[4][j]).LessThanOrEqual(arg2)
-        //                        ;
-        //                    break;
-        //                case 6:
-        //                    actual = EmptyFilter()
-        //                        .Column(TestData[4][j]).NotEqual(arg2)
-        //                        ;
-        //                    break;
-        //            }        
-
-
-        //            //Assert
-        //            Assert.AreEqual(expected,actual);
-
-
-        //        }
-        //    }
-
-        //}
-
-        #endregion
-
         #endregion
 
         #region Comparison Operators Tests
