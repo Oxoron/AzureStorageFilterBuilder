@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureStorageFilterBuilder",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureStorageFilterBuilder_UnitTests", "..\AzureStorageFilterBuilder_UnitTests\AzureStorageFilterBuilder_UnitTests.csproj", "{05AEF884-7479-46B9-B756-CC3900B917EA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{5090D96F-AF99-4984-8D50-18AFBFFB21E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "..\Examples\Examples.csproj", "{7A6FFAF2-838B-4A4C-8893-05AF919886AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +25,15 @@ Global
 		{05AEF884-7479-46B9-B756-CC3900B917EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05AEF884-7479-46B9-B756-CC3900B917EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05AEF884-7479-46B9-B756-CC3900B917EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A6FFAF2-838B-4A4C-8893-05AF919886AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A6FFAF2-838B-4A4C-8893-05AF919886AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A6FFAF2-838B-4A4C-8893-05AF919886AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A6FFAF2-838B-4A4C-8893-05AF919886AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7A6FFAF2-838B-4A4C-8893-05AF919886AF} = {5090D96F-AF99-4984-8D50-18AFBFFB21E0}
 	EndGlobalSection
 EndGlobal
